@@ -20,11 +20,13 @@ var tareasDeserializadas = JsonSerializer.Deserialize<List<Tareas>>(Json);
 List<Tareas> listTareas = tareasDeserializadas!;
 
 //Muestro todas las tareas
+Console.WriteLine("------Todas las tareas------");
 foreach (var T in listTareas)
 {
     Console.WriteLine("Titulo:" + T.title + " - " + "Completado:" + T.completed);
 
 }
+    Console.WriteLine("\n");
 
 
 //Muestro las tareas pendientes
@@ -36,3 +38,17 @@ foreach (var T in listTareas)
         Console.WriteLine("Titulo:" + T.title + " - " + "Completado:" + T.completed);
     }
 }
+        Console.WriteLine("\n");
+
+
+//Muestro las tareas completadas
+Console.WriteLine("------Tareas Completadas------");
+foreach (var T in listTareas)
+{
+    if (T.completed)
+    {
+        Console.WriteLine("Titulo:" + T.title + " - " + "Completado:" + T.completed);
+    }
+
+}
+            Console.WriteLine("\n");
