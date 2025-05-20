@@ -1,0 +1,17 @@
+bin/
+obj/
+Add commentMore actions
+# Configuración de Visual Studio Code
+.vscode/
+
+# Archivos de solución temporales
+*.user
+*.suo
+
+# Archivos del sistema
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
