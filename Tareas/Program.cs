@@ -22,6 +22,6 @@ List<Tareas> listTareas = tareasDeserializadas!;
 //Mostrar informacion
 foreach(var T in listTareas)
 {
-    Console.WriteLine("Usuario ID:" + T.userId + " " + "ID:" + T.id + " " +"Titulo:" + T.title +" " + "Completado:" + T.completed +"\n");
+    Console.WriteLine("Titulo:" + T.title +" - " + "Completado:" + T.completed +"\n");
 }
 
