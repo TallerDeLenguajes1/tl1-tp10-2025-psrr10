@@ -24,3 +24,14 @@ foreach (var T in listTareas)
     Console.WriteLine("Titulo:" + T.title + " - " + "Completado:" + T.completed);
 }
 Console.WriteLine("\n");
+
+//muestro todas las tareas pendientes
+Console.WriteLine("------Tareas Pendientes------");
+foreach (var T in listTareas)
+{
+    if (!T.completed)
+    {
+        Console.WriteLine("Titulo:" + T.title + " - " + "Completado:" + T.completed);
+    }
+}
+Console.WriteLine("\n");
