@@ -35,3 +35,14 @@ foreach (var T in listTareas)
     }
 }
 Console.WriteLine("\n");
+
+//muestro todas las tareas completadas
+Console.WriteLine("------Tareas Completadas------");
+foreach (var T in listTareas)
+{
+    if (T.completed)
+    {
+        Console.WriteLine("Titulo:" + T.title + " - " + "Completado:" + T.completed);
+    }
+}
+Console.WriteLine("\n");
