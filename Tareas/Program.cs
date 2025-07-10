@@ -8,7 +8,7 @@ HttpClient client = new HttpClient();
 
 string url = "https://jsonplaceholder.typicode.com/todos/";
 
-//Envui solicitud GET y verifico que sea exitosa
+//Envio solicitud GET y verifico que sea exitosa
 HttpResponseMessage respuesta = await client.GetAsync(url);
 respuesta.EnsureSuccessStatusCode();
 
@@ -46,3 +46,8 @@ foreach (var T in listTareas)
     }
 }
 Console.WriteLine("\n");
+
+//Serializo y guardo en JSON
+string json = JsonSerializer.Serialize(listTareas, new JsonSerializerOptions { WriteIndented = true });
+await File.WriteAllTextAsync("tareas.json", json);
+Console.WriteLine("Archivo 'tareas.json'guardado correctamente");
